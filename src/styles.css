@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+
+
+
+
+
+
+:root {
+  --ink: #0b1513;
+  --paper: #f2eee7;
+  --paper2: #e9e3d8;
+  --line: rgba(11, 21, 19, 0.14);
+  --muted: #68716d;
+  --lime: #d7ff63;
+  --white: #f8f7f3;
+}
+
+
+
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+
+
+
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+
+
+
+a{text-decoration:none;color:inherit} button{font:inherit}
+
+
+
+.site{overflow:hidden}.progress{position:fixed;z-index:100;top:0;left:0;width:100%;height:3px;background:var(--lime);transform-origin:left}
+
+
+
+.nav{position:fixed;z-index:80;top:0;left:0;width:100%;height:82px;padding:18px 4vw;display:flex;align-items:center;justify-content:space-between;color:white;background:linear-gradient(180deg,rgba(0,0,0,.52),transparent);transition:.3s}
+
+
+
+.brand{border:0;background:none;color:inherit;display:flex;gap:11px;align-items:center;cursor:pointer;text-align:left}
+
+
+
+.brandMark{width:38px;height:38px;border:1px solid rgba(255,255,255,.55);display:grid;place-items:center;font-size:12px;letter-spacing:-.04em}
+
+
+
+.brand b,.brand small,.footerBrand b,.footerBrand small{display:block}.brand b{font-size:14px}.brand small{font-size:8px;letter-spacing:.17em;opacity:.72;margin-top:3px}
+
+
+
+.navLinks{display:flex;align-items:center;gap:30px}.navLinks button{background:none;border:0;color:white;cursor:pointer;font-size:12px}.navCta{display:flex;gap:7px;align-items:center;padding:11px 16px;border:1px solid rgba(255,255,255,.4);border-radius:100px;font-size:12px}
+
+
+
+.menuBtn{display:none;background:none;color:white;border:0}
+
+
+
+.hero{height:100svh;min-height:720px;background:#14211e;position:relative;color:white;display:flex;align-items:center}
+
+
+
+.heroGrid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:90px 90px;mask-image:linear-gradient(90deg,#000,transparent 75%);opacity:.6}
+
+
+
+.heroImageWrap{position:absolute;right:3%;bottom:0;width:min(34vw,480px);height:82%;z-index:1;transform-origin:center bottom}
+
+
+
+.heroImage{width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:contrast(1.02) saturate(.85)}
+
+
+
+.heroShade{position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#07100e 0%,rgba(7,16,14,.83) 31%,rgba(7,16,14,.15) 69%,rgba(7,16,14,.5) 100%),linear-gradient(0deg,rgba(7,16,14,.6),transparent 50%)}
+
+
+
+.heroContent{position:relative;z-index:4;margin-left:9vw;width:min(690px);padding-top:5vh}.eyebrow{display:flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.24em;color:#c7d1cb}.dot{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 16px var(--lime)}
+
+
+
+.hero h1{font-size:clamp(58px,8.1vw,132px);line-height:.87;letter-spacing:-.075em;margin:25px 0 28px;font-weight:500}.hero h1 em,.services h2 i,.niagara h2 i,.contact h2 i,.quoteBand em{font-family:"Playfair Display",serif;font-weight:500}
+
+
+
+.hero h1 em{color:var(--lime)}
+
+
+
+.heroContent>p{max-width:470px;color:#c2cbc5;line-height:1.65;font-size:15px}
+
+
+
+.heroActions{display:flex;gap:12px;margin-top:32px}.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 20px;border-radius:100px;font-size:12px;font-weight:600;transition:.25s}.btn.primary{background:var(--lime);color:#111}.btn.primary:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(215,255,99,.16)}.btn.ghost{border:1px solid rgba(255,255,255,.3);color:white}.btn.ghost:hover{background:white;color:#111}.btn.dark{background:var(--ink);color:white;margin-top:30px}.btn.dark:hover{transform:translateY(-3px)}
+
+
+
+.heroSide{position:absolute;z-index:5;right:3.4vw;top:50%;display:flex;align-items:center;gap:9px;transform:rotate(90deg);font-size:9px;letter-spacing:.2em}.heroSide i{width:30px;height:1px;background:rgba(255,255,255,.5)}
+
+
+
+.scrollCue{position:absolute;z-index:5;left:4vw;bottom:35px;background:none;border:0;color:#bfc9c2;display:flex;align-items:center;gap:9px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;cursor:pointer}.scrollCue svg{border:1px solid rgba(255,255,255,.3);border-radius:50%;padding:6px;width:28px;height:28px}
+
+
+
+.heroBadge{position:absolute;z-index:5;right:6vw;bottom:42px;display:flex;gap:9px;align-items:center;font-size:8px;letter-spacing:.13em;color:#c7d1cb}.heroBadge svg{color:var(--lime)}.heroBadge b{color:white;font-weight:500}
+
+
+
+.ticker{background:var(--lime);overflow:hidden;white-space:nowrap;padding:16px 0}.tickerTrack{display:flex;width:max-content;animation:ticker 28s linear infinite}.ticker span{font-size:12px;letter-spacing:.17em;font-weight:700;padding:0 25px}.ticker b{margin-left:50px}@keyframes ticker{to{transform:translateX(-50%)}}
+
+
+
+.section{padding:120px 9vw}.sectionLabel{font-size:9px;letter-spacing:.22em;font-weight:700;color:#7b827e}.sectionLabel.light{color:#aeb8b2}
+
+
+
+.aboutGrid{display:grid;grid-template-columns:1.05fr .75fr;gap:9vw;margin-top:58px}.kicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#7a827d}.aboutTitle h2{font-size:clamp(45px,6.2vw,90px);line-height:.95;letter-spacing:-.06em;font-weight:500;margin:18px 0}.aboutTitle h2 span{font-family:"Playfair Display",serif;font-style:italic;font-weight:500}.aboutCopy{align-self:end;padding-bottom:8px}.aboutCopy p{font-size:16px;line-height:1.75;color:#59615d;margin:0 0 20px}.textLink{display:inline-flex;align-items:center;gap:9px;border-bottom:1px solid var(--ink);padding-bottom:7px;font-size:12px;font-weight:600;margin-top:10px}
+
+
+
+.services{background:var(--ink);color:white}.servicesHead{display:flex;justify-content:space-between;align-items:end;gap:30px}.services h2{font-size:clamp(50px,6vw,86px);line-height:.93;letter-spacing:-.06em;font-weight:500;margin:25px 0 0}.servicesHead>p{max-width:310px;color:#9ea9a3;line-height:1.7;font-size:13px;margin:0}.serviceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2c3733;margin-top:75px}.serviceCard{background:var(--ink);min-height:390px;padding:27px;display:flex;flex-direction:column;transition:.35s}.serviceCard:hover{background:#15231f;transform:translateY(-6px)}.serviceTop{display:flex;justify-content:space-between;color:#82908a;font-size:11px}.serviceIcon{margin-top:45px;color:var(--lime)}.serviceIcon svg{width:31px;height:31px}.serviceCard h3{font-size:29px;letter-spacing:.03em;margin:17px 0 8px}.serviceCard p{color:#9da8a2;font-size:13px;line-height:1.65;max-width:310px}.serviceLink{margin-top:auto;display:flex;gap:6px;align-items:center;color:white;font-size:11px;border-top:1px solid #303b37;padding-top:18px}
+
+
+
+.niagara{display:grid;grid-template-columns:1fr 1fr;gap:8vw;padding-top:0;padding-bottom:0}.niagaraVisual{min-height:700px;background:radial-gradient(circle at 50% 50%,rgba(215,255,99,.13),transparent 24%),linear-gradient(145deg,#172722,#0b1513);position:relative;overflow:hidden}.mapLines{position:absolute;inset:-20%;background-image:linear-gradient(35deg,transparent 48%,rgba(215,255,99,.14) 49%,transparent 50%),linear-gradient(125deg,transparent 48%,rgba(255,255,255,.08) 49%,transparent 50%);background-size:80px 80px;transform:rotate(9deg);opacity:.8}.locationCard{position:absolute;left:8%;bottom:10%;display:flex;gap:10px;align-items:center;background:rgba(10,18,16,.8);backdrop-filter:blur(10px);padding:15px 18px;color:white;border:1px solid rgba(255,255,255,.12)}.locationCard svg{color:var(--lime)}.locationCard small,.locationCard strong{display:block}.locationCard small{font-size:8px;letter-spacing:.2em;color:#8d9993}.locationCard strong{font-size:12px;letter-spacing:.1em;margin-top:4px}.circleText{position:absolute;top:13%;left:8%;font-size:10px;letter-spacing:.27em;color:rgba(255,255,255,.45);width:260px;line-height:2.3;transform:rotate(-18deg)}.niagaraCopy{align-self:center;padding:100px 0}.niagara h2{font-size:clamp(52px,6vw,84px);line-height:.94;letter-spacing:-.06em;font-weight:500;margin:25px 0}.niagaraCopy>p{max-width:470px;color:#626b66;line-height:1.75;font-size:15px}.miniStats{display:flex;gap:32px;margin-top:35px}.miniStats b{display:block;font-size:18px}.miniStats span{display:block;color:#78807c;font-size:10px;margin-top:5px}.quoteBand{background:#d8d1c4;min-height:500px;display:flex;align-items:center;justify-content:center;text-align:center;position:relative}.quoteBand blockquote{font-size:clamp(42px,6vw,82px);line-height:1;letter-spacing:-.055em;font-weight:500;margin:0}.quoteMark{position:absolute;left:7vw;top:60px;font:100px "Playfair Display";opacity:.16}
+
+
+
+.contact{background:var(--paper2)}.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:9vw;margin-top:55px}.contact h2{font-size:clamp(58px,7vw,100px);line-height:.88;letter-spacing:-.07em;font-weight:500;margin:0}.contactIntro{max-width:390px;color:#68716c;line-height:1.7;font-size:14px;margin:28px 0}.contactLinks{display:flex;gap:20px;flex-wrap:wrap;margin-top:38px}.contactLinks a{display:flex;align-items:center;gap:10px;font-size:13px}.contactLinks svg{width:19px}.contactLinks small{display:block;color:#7d847f;font-size:8px;letter-spacing:.16em;margin-bottom:4px}.wa{display:grid;place-items:center;width:25px;height:25px;border:1px solid var(--ink);font-size:8px;font-weight:700;border-radius:50%}.contactCard{background:var(--ink);color:white;padding:36px;min-height:420px;display:flex;flex-direction:column}.contactCardTop{display:flex;justify-content:space-between;color:#9ca8a1;font-size:9px;letter-spacing:.2em}.contactCard h3{font-size:42px;line-height:.98;letter-spacing:-.05em;font-weight:500;margin:60px 0 28px}.choiceRow{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.choiceRow a{border:1px solid #34413c;padding:13px 12px;font-size:10px;display:flex;justify-content:space-between;gap:4px;align-items:center}.choiceRow a:hover{background:#1c2a25}.bigContact{margin-top:auto;padding-top:20px;border-top:1px solid #303b37;display:flex;justify-content:space-between;font-size:12px}.bigContact svg{color:var(--lime)}
+
+
+
+footer{background:var(--ink);color:white;min-height:90px;padding:25px 4vw;display:flex;align-items:center;justify-content:space-between}.footerBrand{display:flex;align-items:center;gap:10px}.footerBrand .brandMark{border-color:#42504a}.footerBrand b{font-size:13px}.footerBrand small{font-size:7px;color:#84908a;letter-spacing:.17em;margin-top:3px}.footerCenter{font-size:8px;color:#77847d;letter-spacing:.2em}.footerRight{display:flex;gap:10px}.footerRight a{border:1px solid #39453f;border-radius:50%;width:31px;height:31px;display:grid;place-items:center;font-size:8px}.footerRight a:hover{border-color:var(--lime);color:var(--lime)}
+
+
+
+
+
+
+
+@media(max-width:850px){
+
+
+
+  .nav{height:72px;padding:14px 5vw}.menuBtn{display:block}.navLinks{position:absolute;top:72px;left:0;right:0;background:#0b1513;padding:22px 5vw;display:none;flex-direction:column;align-items:flex-start;gap:18px}.navLinks.open{display:flex}.navLinks button{font-size:15px}.navCta{width:100%;justify-content:center}.hero{min-height:720px}.heroImageWrap{width:70%;height:72%;right:-8%;bottom:0;opacity:.75}.heroShade{background:linear-gradient(90deg,#07100e 0%,rgba(7,16,14,.74) 45%,rgba(7,16,14,.25) 100%)}.heroContent{margin-left:7vw;padding-right:8vw}.hero h1{font-size:clamp(55px,14vw,88px)}.heroSide{display:none}.heroBadge{right:6vw;bottom:35px}.section{padding:85px 7vw}.aboutGrid,.contactGrid,.niagara{grid-template-columns:1fr;gap:45px}.aboutCopy{max-width:650px}.servicesHead{display:block}.servicesHead>p{margin-top:30px}.serviceGrid{grid-template-columns:1fr;margin-top:50px}.serviceCard{min-height:320px}.niagara{padding-top:0}.niagaraVisual{min-height:480px}.niagaraCopy{padding:75px 0}.quoteBand{min-height:400px;padding:40px 7vw}.contactCard{min-height:390px}.footerCenter{display:none}
+
+
+
+}
+
+
+
+@media(max-width:520px){
+
+
+
+  .heroActions{flex-direction:column;align-items:flex-start}.btn{padding:14px 17px}.heroBadge{display:none}.scrollCue{bottom:22px}.heroImageWrap{right:-12%;width:78%;height:68%;bottom:0}.heroContent{padding-top:0}.aboutTitle h2{font-size:48px}.services h2,.niagara h2{font-size:53px}.miniStats{gap:18px}.choiceRow{grid-template-columns:1fr}.contactCard h3{margin-top:42px}.contactLinks{flex-direction:column}.circleText{left:3%;font-size:8px}.footerRight{display:none}
+
+
+
+}
